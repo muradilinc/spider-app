@@ -6,13 +6,43 @@
     <h1 class="text-[48px] leading-[56px] font-extrabold text-white mb-[60px]">Sign in</h1>
     <label class="font-bold text-[12px] leading-[16px] text-white mb-[16px] block">
       Telegram username
-      <input formControlName="username" class="w-full block border border-white rounded-[4px] px-[20px] py-[12px] bg-black font-normal text-[14px] leading-[21px] mt-[8px] text-white" type="text" placeholder="Enter login">
+      <input formControlName="username"
+             class="w-full block border border-white rounded-[4px] px-[20px] py-[12px] bg-black font-normal text-[14px] leading-[21px] mt-[8px] text-white"
+             type="text" placeholder="Enter login">
     </label>
     <label class="font-bold text-[12px] leading-[16px] text-white mb-[32px] block">
       Password
-      <input formControlName="password" class="w-full block border border-white rounded-[4px] px-[20px] py-[12px] bg-black font-normal text-[14px] leading-[21px] mt-[8px] text-white" type="password" placeholder="Enter password">
+      <div class="relative">
+        <input
+          formControlName="password"
+          class="w-full block border border-white rounded-[4px] px-[20px] py-[12px] bg-black font-normal text-[14px] leading-[21px] mt-[8px] text-white"
+          [type]="isPasswordVisible() ? 'text' : 'password'" placeholder="Enter password">
+
+        <button
+          (click)="isPasswordVisible.set(!isPasswordVisible())"
+          class="text-[#FFFFFFBF] w-[20px] bg-none border-none absolute top-[50%] translate-y-[-50%] right-[12px] cursor-pointer">
+          <svg
+            id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+            <defs>
+              <style>.cls-1 {
+                fill: currentColor;
+                stroke: #FFF;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 2px
+              }</style>
+            </defs>
+            <circle class="cls-1" cx="24" cy="24" r="5"/>
+            <path class="cls-1" d="M44 24s-7 10-20 10S4 24 4 24s7-10 20-10 20 10 20 10z"/>
+            <path class="cls-1" d="M-360-496h700v700h-700z"/>
+          </svg>
+        </button>
+      </div>
     </label>
-    <button type="submit" class="w-full border border-black bg-[#AE7AFF] text-black px-[20px] py-[10px] font-bold text-[14px] leading-[24px] cursor-pointer relative before:absolute before:bottom-[-4px] before:right-[-4px] before:bg-[#5F646D] before:w-full before:h-full before:z-[-1] rounded-[4px] before:rounded-[4px]">sign in</button>
+    <button type="submit"
+            class="w-full border border-black bg-[#AE7AFF] text-black px-[20px] py-[10px] font-bold text-[14px] leading-[24px] cursor-pointer relative before:absolute before:bottom-[-4px] before:right-[-4px] before:bg-[#5F646D] before:w-full before:h-full before:z-[-1] rounded-[4px] before:rounded-[4px]">
+      sign in
+    </button>
   </form>
-  <img src="/assets/spider-man-3.png" alt="logo">
+  <img src="/assets/spider-man-3.png" alt="logo" height="960" width="1200">
 </div>
