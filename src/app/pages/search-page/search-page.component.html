@@ -1,0 +1,5 @@
+<div class="grid gap-[8px]">
+  @for (users of profiles; track users.id) {
+    <app-profile-card [user]="users"/>
+  }
+</div>

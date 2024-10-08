@@ -1,0 +1,28 @@
+@if(user) {
+  <div class="border border-black px-[32px] py-[24px] grid grid-cols-[repeat(2,_1fr)_250px_1fr] gap-[32px]">
+    <div class="grid grid-cols-[70px_1fr] gap-[20px]">
+      <img
+        class="w-[70px] h-[70px] rounded-[70%] overflow-hidden"
+        [src]="user.avatarUrl | imgUrl"
+        alt="avatar"
+      >
+      <div class="flex flex-col gap-[8px]">
+        <strong class="font-extrabold">{{user.firstName}} {{user.lastName}}</strong>
+        <span>{{user.username}}</span>
+      </div>
+    </div>
+    <div>
+      {{user.description}}
+    </div>
+    <div class="flex flex-wrap gap-[4px] h-min">
+      @for (stack of user.stack; track stack) {
+        <div class="px-[8px] py-[4px] h-[24px] rounded-[4px] border border-black text-[12px] inline font-bold">
+          {{stack}}
+        </div>
+      }
+    </div>
+    <div>
+      <button class="capitalize border-none bg-[#AE7AFF] text-black py-[10px] px-[20px] font-bold text-[14px] leading-[24px]">follow</button>
+    </div>
+  </div>
+}

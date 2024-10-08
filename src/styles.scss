@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background: url("https://i.pinimg.com/564x/98/3f/55/983f551ae9d735e4b6a1b1aac9248ff2.jpg") no-repeat;
+  background-size: cover;
+}

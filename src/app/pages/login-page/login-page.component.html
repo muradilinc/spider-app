@@ -1,0 +1,18 @@
+<div class="grid grid-cols-[1fr_1fr] h-[100dvh] items-center mx-[5%] my-[0px]">
+  <form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+  >
+    <h1 class="text-[48px] leading-[56px] font-extrabold text-white mb-[60px]">Sign in</h1>
+    <label class="font-bold text-[12px] leading-[16px] text-white mb-[16px] block">
+      Telegram username
+      <input formControlName="username" class="w-full block border border-white rounded-[4px] px-[20px] py-[12px] bg-black font-normal text-[14px] leading-[21px] mt-[8px] text-white" type="text" placeholder="Enter login">
+    </label>
+    <label class="font-bold text-[12px] leading-[16px] text-white mb-[32px] block">
+      Password
+      <input formControlName="password" class="w-full block border border-white rounded-[4px] px-[20px] py-[12px] bg-black font-normal text-[14px] leading-[21px] mt-[8px] text-white" type="password" placeholder="Enter password">
+    </label>
+    <button type="submit" class="w-full border border-black bg-[#AE7AFF] text-black px-[20px] py-[10px] font-bold text-[14px] leading-[24px] cursor-pointer relative before:absolute before:bottom-[-4px] before:right-[-4px] before:bg-[#5F646D] before:w-full before:h-full before:z-[-1] rounded-[4px] before:rounded-[4px]">sign in</button>
+  </form>
+  <img src="/assets/spider-man-3.png" alt="logo">
+</div>
